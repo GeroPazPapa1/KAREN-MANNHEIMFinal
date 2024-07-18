@@ -109,7 +109,7 @@
     <!-- Proyecto 1 -->
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="w-100" src="img/equipototal.jpg" alt="Image">
+            <img class="w-100" src="img/equipototal2.jpg" alt="Image">
             <div class="carousel d-flex flex-column align-items-center justify-content-center">
                 <!-- Add content here if needed -->
             </div>
@@ -203,34 +203,162 @@
     </div>
 </div>
 <!-- Team End -->
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
 
-    <div class="container-fluid">
-        <div class="d-flex justify-content-center">
-            <div class="row w-100" style="max-width: 1200px;">
-                <div class="col-lg-5 mt-5 py-5 pr-lg-5">
-                    <h1 class="mb-4 text-center">Our history</h1>
-                    <p class="mb-4 text-center">Passionate about service and lighting, I decided to pursue a career in this field in my native country of Peru. I began developing lighting projects utilizing imported items from Trazzo Colombia, the company that introduced me to the world of illumination and supplied me with ample experience.</p>
-                </div>
-    
-                <div class="col-lg-4">
-                    <div class="d-flex flex-column align-items-center justify-content-center h-100 overflow-hidden">
-                        <img class="img-fluid" src="img/ella.PNG" alt="">
-                    </div>
-                </div>
+    .timeline-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        overflow-x: hidden;
+    }
+
+    .timeline-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+
+    .timeline-content div {
+        flex: 1 1 300px;
+        margin: 10px;
+    }
+
+    .timeline-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .timeline-navigation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .timeline {
+        display: flex;
+        overflow-x: auto;
+        padding: 10px 0;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+    }
+
+    .timeline::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
+    }
+
+    .timeline-item {
+        display: inline-block;
+        padding: 10px 20px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .timeline-item.active {
+        font-weight: bold;
+        border-bottom: 2px solid black;
+    }
+
+    .timeline-item:hover {
+        color: gray;
+    }
+
+    .timeline-button {
+        cursor: pointer;
+        user-select: none;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .timeline-button.disabled {
+        cursor: not-allowed;
+        color: lightgray;
+    }
+</style>
+</head>
+<body>
+<div class="container-fluid timeline-container">
+    <div class="d-flex justify-content-center timeline-content">
+        <div class="row w-100" style="max-width: 1200px;">
+            <div class="col-lg-5 mt-5 py-5 pr-lg-5">
+                <h1 class="mb-4 text-center">Our history</h1>
+                <p class="mb-4 text-center" id="timeline-description">Passionate about service and lighting, I decided to pursue a career in this field in my native country of Peru. I began developing lighting projects utilizing imported items from Trazzo Colombia, the company that introduced me to the world of illumination and supplied me with ample experience.</p>
             </div>
-        </div>
-    
-    <!-- Frase 3 -->
-    <div class="container">
-        <div class="row justify-content-center no-gutters">
-            <div class="col-lg-7 col-md-8 col text-center mb-4">
-                <h1 class="mb-4">Let's make your space, a dream place</h1>
-                <h3 class="text-primary-black font-weight-normal mb-1">Want to meet me and the team?</h3>
-                <h3 class="text-primary-black font-weight-normal mb-3">Have questions?</h3>
-                <a href="bookacall.html" class="btn btn-primary mt-3 py-2 px-5" style="background-color: black; color: white; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(0, 0, 0, 0.5)'" onmouseout="this.style.backgroundColor='black'">Book a call now 📞</a>
+            <div class="col-lg-4 timeline-image">
+                <div class="d-flex flex-column align-items-center justify-content-center h-100 overflow-hidden">
+                    <img class="img-fluid" src="img/ella.PNG" alt="">
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="timeline-navigation">
+        <span class="timeline-button" id="prevButton">&larr;</span>
+        <div class="timeline" id="timeline">
+            <div class="timeline-item active" data-year="1992" data-description="Passionate about service and lighting, I decided to pursue a career in this field in my native country of Peru. I began developing lighting projects utilizing imported items from Trazzo Colombia, the company that introduced me to the world of illumination and supplied me with ample experience.">1992</div>
+            <div class="timeline-item" data-year="1994" data-description="Description for 1994.">1994</div>
+            <div class="timeline-item" data-year="1997" data-description="Description for 1997.">1997</div>
+            <div class="timeline-item" data-year="1999" data-description="Description for 1999.">1999</div>
+            <div class="timeline-item" data-year="2000" data-description="Description for 2000.">2000</div>
+            <div class="timeline-item" data-year="2001" data-description="Description for 2001.">2001</div>
+            <div class="timeline-item" data-year="2003" data-description="Description for 2003.">2003</div>
+            <div class="timeline-item" data-year="2004" data-description="Description for 2004.">2004</div>
+            <div class="timeline-item" data-year="2008" data-description="Description for 2008.">2008</div>
+            <div class="timeline-item" data-year="2009" data-description="Description for 2009.">2009</div>
+            <div class="timeline-item" data-year="2010" data-description="Description for 2010.">2010</div>
+            <div class="timeline-item" data-year="2011" data-description="Description for 2011.">2011</div>
+            <div class="timeline-item" data-year="2014" data-description="Description for 2014.">2014</div>
+        </div>
+        <span class="timeline-button" id="nextButton">&rarr;</span>
+    </div>
+</div>
+
+<!-- Frase 3 -->
+<div class="container">
+    <div class="row justify-content-center no-gutters">
+        <div class="col-lg-7 col-md-8 col text-center mb-4">
+            <h1 class="mb-4">Let's make your space, a dream place</h1>
+            <h3 class="text-primary-black font-weight-normal mb-1">Want to meet me and the team?</h3>
+            <h3 class="text-primary-black font-weight-normal mb-3">Have questions?</h3>
+            <a href="bookacall.html" class="btn btn-primary mt-3 py-2 px-5" style="background-color: black; color: white; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(0, 0, 0, 0.5)'" onmouseout="this.style.backgroundColor='black'">Book a call now 📞</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const timeline = document.getElementById('timeline');
+        const items = document.querySelectorAll('.timeline-item');
+        const description = document.getElementById('timeline-description');
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+
+        items.forEach(item => {
+            item.addEventListener('click', function () {
+                document.querySelector('.timeline-item.active').classList.remove('active');
+                item.classList.add('active');
+                description.textContent = item.getAttribute('data-description');
+            });
+        });
+
+        prevButton.addEventListener('click', function () {
+            timeline.scrollBy({ left: -200, behavior: 'smooth' });
+        });
+
+        nextButton.addEventListener('click', function () {
+            timeline.scrollBy({ left: 200, behavior: 'smooth' });
+        });
+    });
+</script>
+</body>
 
 
 
