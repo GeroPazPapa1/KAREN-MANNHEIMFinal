@@ -123,7 +123,7 @@
     <!-- Proyecto 1 -->
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="w-100" src="img/equipototal2.jpg" alt="Image">
+            <img class="w-100" src="img/equipototal4.jpg" alt="Image">
             <div class="carousel d-flex flex-column align-items-center justify-content-center">
                 <!-- Add content here if needed -->
             </div>
@@ -165,31 +165,98 @@
         </div>
     </div>
 
- <!-- Team Start -->
-<div class="team">
-    <div class="container">
-        <div class="section-header">
-            <h2>Our Team</h2>
-        </div>
-        <div class="row">
-            <div class="col-lg-6 col-md-6 text-center mb-4">
-                <img src="img/KarenPerfil.png" alt="Equipo" class="img-fluid">
+    <style>
+        .team {
+            padding: 20px 0;
+        }
+        .team .section-header h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .team .member {
+            position: relative;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .team .member .image-placeholder {
+            width: 80%;
+            max-width: 300px;
+            margin: 0 auto;
+            aspect-ratio: 3 / 4; /* Mantener la proporción */
+            background-size: cover;
+            background-position: center;
+        }
+        .team .member .name {
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .team .member .position {
+            font-size: 16px;
+            color: gray;
+        }
+        .karen {
+            background-image: url('img/karenmycompany.jpeg');
+        }
+        .alejandro {
+            background-image: url('img/alejandro.png');
+        }
+        .horacio {
+            background-image: url('img/horacio.png');
+        }
+        .angel {
+            background-image: url('img/angel.png');
+        }
+    
+        @media (max-width: 768px) {
+            .team .member .image-placeholder {
+                width: 70%;
+                max-width: 200px;
+            }
+        }
+    
+        @media (max-width: 576px) {
+            .team .member .image-placeholder {
+                width: 60%;
+                max-width: 150px;
+            }
+        }
+    </style>
+    
+    <!-- Team Start -->
+    <div class="team">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Team</h2>
             </div>
-            <div class="col-lg-6 col-md-6 text-center mb-4">
-                <img src="img/AlejandroPerfil.png" alt="Equipo" class="img-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 member">
+                    <div class="image-placeholder karen"></div>
+                    <div class="name">Karen Smith</div>
+                    <div class="position">Fundadora y Directora Comercial</div>
+                </div>
+                <div class="col-lg-6 col-md-6 member">
+                    <div class="image-placeholder alejandro"></div>
+                    <div class="name">Alejandro Arrarte</div>
+                    <div class="position">Gerente General</div>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6 col-md-6 text-center mb-4">
-                <img src="img/HoracioPerfil.png" alt="Equipo" class="img-fluid">
-            </div>
-            <div class="col-lg-6 col-md-6 text-center mb-4">
-                <img src="img/Angelperfil.png" alt="Equipo" class="img-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 member">
+                    <div class="image-placeholder horacio"></div>
+                    <div class="name">Horacio Espinoza</div>
+                    <div class="position">Gerente de Finanzas</div>
+                </div>
+                <div class="col-lg-6 col-md-6 member">
+                    <div class="image-placeholder angel"></div>
+                    <div class="name">Angel Rios</div>
+                    <div class="position">Gerente de Planificación y Logística</div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Team End -->
+    <!-- Team End -->
+    
 
 
 <style>
