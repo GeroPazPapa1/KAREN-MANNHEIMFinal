@@ -9644,6 +9644,15 @@ h6 {
   z-index: 1;
 }
 
+.testimonial-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
 .testimonial-carousel .owl-nav .owl-prev,
 .testimonial-carousel .owl-nav .owl-next {
   width: 40px;
@@ -9654,7 +9663,7 @@ h6 {
   justify-content: center;
   color: #000000;
   background: transparent;
-  border: 1px solid #000000;
+  
   font-size: 22px;
   transition: .3s;
 }
@@ -9664,6 +9673,7 @@ h6 {
   color: #0000001c;
   background: #0000001c;
 }
+
 
 .contact-form .help-block ul {
   margin: 0;
